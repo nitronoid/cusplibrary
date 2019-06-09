@@ -128,12 +128,13 @@ template <unsigned int THREADS_PER_VECTOR,
          typename DerivedPolicy,
          typename MatrixType,
          typename ArrayType1,
-         typename ArrayType2>
+         typename ArrayType2,
+         typename ArrayType3>
 void gauss_seidel_spmv(cuda::execution_policy<DerivedPolicy>& exec,
                        const MatrixType& A,
                        ArrayType1&  x,
-                       const ArrayType1&  b,
-                       const ArrayType2& indices,
+                       const ArrayType2&  b,
+                       const ArrayType3& indices,
                        const int row_start,
                        const int row_stop,
                        const int row_step)
@@ -162,12 +163,13 @@ void gauss_seidel_spmv(cuda::execution_policy<DerivedPolicy>& exec,
 template<typename DerivedPolicy,
          typename MatrixType,
          typename ArrayType1,
-         typename ArrayType2>
+         typename ArrayType2,
+         typename ArrayType3>
 void gauss_seidel_indexed(cuda::execution_policy<DerivedPolicy>& exec,
                           const MatrixType& A,
                                 ArrayType1& x,
-                          const ArrayType1& b,
-                          const ArrayType2& indices,
+                          const ArrayType2& b,
+                          const ArrayType3& indices,
                           const int row_start,
                           const int row_stop,
                           const int row_step)
