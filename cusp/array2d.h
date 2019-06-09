@@ -374,7 +374,7 @@ public:
     /*! This constructor creates an empty \p array2d vector.
      */
     array2d_view(void)
-        : Parent(), pitch(0), values(0) {}
+        : Parent(), pitch(0), values() {}
 
     /*! This constructor creates a array2d_view from another array2d_view.
      *  \param a array2d_view used to create this array2d_view.
