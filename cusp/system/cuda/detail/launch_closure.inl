@@ -17,6 +17,7 @@
 #include <thrust/detail/minmax.h>
 #include <thrust/detail/type_traits.h>
 #include <thrust/detail/temporary_array.h>
+#include <thrust/detail/config/compiler_fence.h>
 #include <thrust/system/cuda/detail/execution_policy.h>
 
 #include <cusp/system/cuda/detail/synchronize.h>
