@@ -55,7 +55,8 @@ void transpose(thrust::execution_policy<DerivedPolicy>& exec,
     typedef typename MatrixType1::orientation Orientation1;
     typedef typename MatrixType2::orientation Orientation2;
 
-    //At.resize(A.num_cols, A.num_rows);
+    // Crashes on sm_52
+    At.resize(A.num_cols, A.num_rows);
 
     thrust::counting_iterator<size_t> begin(0);
     thrust::counting_iterator<size_t> end(A.num_entries);
